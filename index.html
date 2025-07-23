@@ -10,7 +10,6 @@
         :root {
             --primary: #00ff9d;
             --secondary: #0066ff;
-            --whatsapp: #25D366;
             --instagram: #E1306C;
             --dark: #121212;
             --darker: #0a0a0a;
@@ -188,17 +187,6 @@
             color: var(--darker);
         }
 
-        .btn-whatsapp {
-            background-color: var(--whatsapp);
-            color: white;
-            border: none;
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-        }
-
         .btn-instagram {
             background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
             color: white;
@@ -306,69 +294,6 @@
         .skill-item h4 {
             font-size: 1.2rem;
             margin-bottom: 10px;
-        }
-
-        /* WhatsApp Section */
-        .whatsapp-section {
-            background: linear-gradient(135deg, rgba(37, 211, 102, 0.05), rgba(33, 150, 83, 0.05));
-            position: relative;
-            overflow: hidden;
-        }
-
-        .whatsapp-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(37, 211, 102, 0.1) 0%, transparent 70%);
-            transform: rotate(30deg);
-            z-index: -1;
-        }
-
-        .whatsapp-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-
-        .whatsapp-content p {
-            color: #ccc;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
-
-        .whatsapp-box {
-            background-color: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px;
-            border: 1px solid rgba(37, 211, 102, 0.2);
-            margin-top: 30px;
-            max-width: 500px;
-            margin: 0 auto;
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-box:hover {
-            transform: translateY(-10px);
-            border-color: var(--whatsapp);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .whatsapp-box h3 {
-            color: var(--whatsapp);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .whatsapp-box .phone-number {
-            font-size: 1.5rem;
-            margin: 20px 0;
-            color: var(--light);
-            font-weight: 500;
         }
 
         /* Experience & Education */
@@ -617,10 +542,6 @@
             font-size: 1.5rem;
         }
 
-        .whatsapp-contact .contact-icon {
-            background: linear-gradient(135deg, var(--whatsapp), #128C7E);
-        }
-
         .instagram-contact .contact-icon {
             background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
         }
@@ -682,10 +603,6 @@
 
         .social-links .instagram:hover {
             background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-        }
-
-        .social-links .whatsapp:hover {
-            background-color: var(--whatsapp);
         }
 
         .copyright {
@@ -753,10 +670,6 @@
             .section-title {
                 font-size: 2rem;
             }
-
-            .whatsapp-box .phone-number {
-                font-size: 1.2rem;
-            }
         }
 
         @media (max-width: 576px) {
@@ -780,10 +693,6 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
-
-            .whatsapp-box {
-                padding: 20px;
-            }
         }
     </style>
 </head>
@@ -799,7 +708,6 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#whatsapp">WhatsApp</a></li>
                     <li><a href="#instagram">Instagram</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -816,7 +724,7 @@
                 <p class="hero-description">Certified Ethical Hacker | Penetration Tester | Cyber Security Graduate passionate about securing digital landscapes and safeguarding sensitive data from evolving cyber threats.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#whatsapp" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
+                    <a href="#skills" class="btn btn-secondary">View My Skills</a>
                 </div>
             </div>
         </div>
@@ -980,30 +888,6 @@
         </div>
     </section>
 
-    <!-- WhatsApp Section -->
-    <section id="whatsapp" class="section whatsapp-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">WhatsApp Contact</h2>
-                <p class="section-subtitle">Reach out to me directly on WhatsApp for quick communication</p>
-            </div>
-            
-            <div class="whatsapp-content">
-                <p>As a cybersecurity professional, I understand the importance of secure communication channels. WhatsApp provides end-to-end encryption for all messages, making it an ideal platform for discussing security matters, project collaborations, or consultation requests.</p>
-                
-                <div class="whatsapp-box">
-                    <h3><i class="fab fa-whatsapp"></i> WhatsApp Contact</h3>
-                    <p>You can reach me directly at:</p>
-                    <div class="phone-number">+92 300 4278866</div>
-                    <p>Available Monday to Saturday<br>10:00 AM - 6:00 PM (PKT)</p>
-                    <a href="https://wa.me/923004278866" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Instagram Section -->
     <section id="instagram" class="section instagram-section">
         <div class="container">
@@ -1077,15 +961,6 @@
                             <a href="mailto:mian35927@gmail.com">mian35927@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item whatsapp-contact">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>WhatsApp</h3>
-                            <a href="https://wa.me/923004278866" target="_blank">+92 300 4278866</a>
-                        </div>
-                    </div>
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin-in"></i>
@@ -1124,7 +999,6 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/muneeb-mazhar-18a93722b" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:mian35927@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/923004278866" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://instagram.com/iammuneebmazhar" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2025 Muneeb Mazhar. All Rights Reserved.</p>
@@ -1167,18 +1041,6 @@
                 item.style.zIndex = '1';
             });
         });
-
-        // WhatsApp button animation
-        const whatsappBtn = document.querySelector('.btn-whatsapp');
-        if(whatsappBtn) {
-            whatsappBtn.addEventListener('mouseenter', () => {
-                whatsappBtn.querySelector('i').style.transform = 'rotate(15deg)';
-            });
-            
-            whatsappBtn.addEventListener('mouseleave', () => {
-                whatsappBtn.querySelector('i').style.transform = 'rotate(0deg)';
-            });
-        }
     </script>
 </body>
 </html>
