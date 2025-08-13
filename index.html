@@ -5,343 +5,326 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muneeb Mazhar | Cyber Security</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'background-dark': '#01050F',
-                        'neon-blue': '#00FFFF',
-                        'neon-pink': '#FF00FF',
-                        'text-light': '#E0E0E0',
-                        'text-gray': '#888888',
-                    },
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                        'mono': ['Fira Code', 'monospace']
-                    },
-                    boxShadow: {
-                        'neon-glow': '0 0 10px #00FFFF, 0 0 20px #00FFFF',
-                        'inset-glow': 'inset 0 0 10px #FF00FF',
-                    },
-                }
-            }
-        }
-    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: #01050F;
-            color: #E0E0E0;
             font-family: 'Inter', sans-serif;
+            background-color: #0d0124;
+            color: #E2E8F0;
             margin: 0;
-            padding: 0;
-            position: relative;
+            background-image: radial-gradient(at 10% 20%, #1a013d, transparent 60%),
+                              radial-gradient(at 90% 80%, #30015f, transparent 60%);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        /* Updated color for the main heading to a more subtle gray without glow */
+        .header-text {
+            color: #E2E8F0;
+        }
+
+        .neon-text-purple {
+            color: #d156ff;
         }
         
-        /* Glassmorphism effect */
+        .btn-primary {
+            background: linear-gradient(90deg, #d156ff, #00FFFF);
+            padding: 0.75rem 2.5rem;
+            border-radius: 9999px;
+            color: #0d0124;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        }
+        
         .glass-card {
-            background: rgba(1, 5, 15, 0.6);
+            background: rgba(4, 2, 38, 0.5);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(49, 10, 89, 0.2);
             border-radius: 1rem;
-            box-shadow: 0 4px 30px rgba(0, 255, 255, 0.05);
-            padding: 2.5rem;
-            margin: 1.5rem;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 50px rgba(0, 255, 255, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .neon-heading {
-            color: #00FFFF;
-            text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
-            font-family: 'Fira Code', monospace;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle at 10% 10%, rgba(0, 255, 255, 0.1), transparent),
-                        radial-gradient(circle at 90% 90%, rgba(255, 0, 255, 0.1), transparent);
-            animation: move-bg 20s infinite alternate;
-        }
-
-        @keyframes move-bg {
-            0% {
-                background-position: 0% 0%, 100% 100%;
-            }
-            100% {
-                background-position: 100% 100%, 0% 0%;
-            }
-        }
-        
-        .nav-link.active {
-            color: #FF00FF;
-            text-shadow: 0 0 5px #FF00FF;
-        }
-
-        /* Responsive Mobile Nav Toggle */
-        .mobile-menu-btn {
+        /* Style for the confirmation message */
+        .success-message {
             display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .desktop-nav {
-                display: none;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            .glass-card {
-                padding: 1.5rem;
-                margin: 1rem;
-            }
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #00FFFF;
+            margin-top: 1rem;
         }
     </style>
 </head>
-<body class="font-inter">
-    <div class="animated-bg"></div>
+<body class="bg-[#0d0124] text-slate-200">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 p-4 flex justify-between items-center bg-background-dark/80 backdrop-blur-sm border-b border-neon-blue/20">
-        <a href="#hero" class="text-xl font-bold neon-heading tracking-widest">
-            MUNEEB.MAZHAR
-        </a>
-        <ul class="flex space-x-6 desktop-nav font-mono text-text-light">
-            <li><a href="#about" class="nav-link hover:text-neon-blue transition-colors duration-300">/about</a></li>
-            <li><a href="#skills" class="nav-link hover:text-neon-blue transition-colors duration-300">/skills</a></li>
-            <li><a href="#experience" class="nav-link hover:text-neon-blue transition-colors duration-300">/experience</a></li>
-            <li><a href="#projects" class="nav-link hover:text-neon-blue transition-colors duration-300">/projects</a></li>
-            <li><a href="#contact" class="nav-link hover:text-neon-blue transition-colors duration-300">/contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn text-text-light focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
+    <!-- Header and Navigation -->
+    <header class="w-full py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 z-50 bg-[#0d0124]/50 backdrop-blur-md border-b border-[#310a59]">
+        <div class="flex items-center space-x-8">
+            <a href="#" class="text-3xl font-black header-text tracking-tighter">Muneeb Mazhar</a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#about" class="hover:text-slate-500 transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-slate-500 transition-colors duration-300">Skills</a>
+                <a href="#experience" class="hover:text-slate-500 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="hover:text-slate-500 transition-colors duration-300">Projects</a>
+            </nav>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#contact" class="btn-primary">Contact me</a>
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-[#0d0124] z-40 flex-col items-center justify-center space-y-8 text-2xl hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-2xl">X</button>
+        <a href="#about" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">About</a>
+        <a href="#skills" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Skills</a>
+        <a href="#experience" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Experience</a>
+        <a href="#projects" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Projects</a>
+        <a href="#contact" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Contact me</a>
     </nav>
-
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-background-dark/95 z-40 flex flex-col justify-center items-center space-y-8 text-xl font-mono">
-        <button class="absolute top-4 right-4 text-text-light focus:outline-none" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        <a href="#about" class="mobile-nav-link text-neon-blue hover:text-neon-pink transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">/about</a>
-        <a href="#skills" class="mobile-nav-link text-neon-blue hover:text-neon-pink transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">/skills</a>
-        <a href="#experience" class="mobile-nav-link text-neon-blue hover:text-neon-pink transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">/experience</a>
-        <a href="#projects" class="mobile-nav-link text-neon-blue hover:text-neon-pink transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">/projects</a>
-        <a href="#contact" class="mobile-nav-link text-neon-blue hover:text-neon-pink transition-colors duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">/contact</a>
-    </div>
-
-    <main class="container mx-auto max-w-7xl pt-24 pb-12">
+    
+    <main class="container mx-auto px-6 py-24 md:py-32 max-w-7xl">
         <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center text-center p-4">
-            <div class="space-y-4">
-                <h1 class="text-4xl md:text-6xl font-bold text-text-light">
+        <section class="min-h-screen flex items-center justify-center" id="hero">
+            <div class="flex flex-col items-center justify-center w-full max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
                     Muneeb Mazhar
                 </h1>
-                <h2 class="text-lg md:text-2xl neon-heading tracking-widest">
-                    > Certified Ethical Hacker | Pen-tester | Cyber security Graduate
-                </h2>
-                <p class="max-w-3xl mx-auto text-lg text-text-gray mt-8">
+                <h2 class="text-2xl font-semibold neon-text-purple mt-4">Certified Ethical Hacker | Pen-tester | Cyber security Graduate</h2>
+                <p class="text-lg lg:text-xl text-slate-300 mt-6">
                     Accomplished cybersecurity professional with expertise in web application penetration testing, vulnerability assessments, and incident response, backed by a CEH certification and a Bachelor’s degree in Cybersecurity.
                 </p>
-                <a href="#contact" class="inline-block mt-8 px-6 py-3 font-mono text-neon-pink border border-neon-pink rounded-full hover:bg-neon-pink/10 transition-colors duration-300">
-                    Connect
-                </a>
+                <div class="mt-8">
+                    <a href="#contact" class="btn-primary inline-block">Connect with me</a>
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20">
-            <div class="glass-card">
-                <h3 class="text-3xl font-bold neon-heading mb-6">/ about</h3>
-                <p class="text-lg leading-relaxed text-text-light">
-                    I'm a cybersecurity enthusiast pursuing a Bachelor's degree in Cyber Security from Superior University, Lahore. My passion lies in securing digital landscapes and safeguarding sensitive data from evolving cyber threats. I'm a tech enthusiast constantly seeking knowledge about new technologies and their vulnerabilities. To this end, I've developed ethical hacking skills in areas like information gathering, social engineering, penetration testing, and more. I'm eager to leverage these skills and further enhance my knowledge through valuable certifications in the field.
+        <section id="about" class="py-24">
+            <div class="glass-card p-8 md:p-12">
+                <h2 class="text-4xl font-bold header-text mb-6 text-center">About Me</h2>
+                <p class="text-center text-lg max-w-3xl mx-auto text-slate-300">
+                    I am a recent graduate with a Bachelor's degree in Cyber Security from Superior University, Lahore. My passion lies in securing digital landscapes and safeguarding sensitive data from evolving cyber threats. I'm a tech enthusiast constantly seeking knowledge about new technologies and their vulnerabilities. To this end, I've developed ethical hacking skills in areas like information gathering, social engineering, penetration testing, and more. I'm eager to leverage these skills and further enhance my knowledge through valuable certifications in the field.
                 </p>
             </div>
         </section>
 
-        <!-- Skills & Certifications Section -->
-        <section id="skills" class="py-20">
-            <div class="glass-card">
-                <h3 class="text-3xl font-bold neon-heading mb-6">/ skills & certifications</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div>
-                        <h4 class="text-2xl font-bold text-text-light mb-4">Cybersecurity</h4>
-                        <ul class="space-y-2 text-lg text-text-gray">
-                            <li><span class="text-neon-blue">&gt;</span> Penetration Testing</li>
-                            <li><span class="text-neon-blue">&gt;</span> Vulnerability Assessment</li>
-                            <li><span class="text-neon-blue">&gt;</span> Ethical Hacking</li>
-                            <li><span class="text-neon-blue">&gt;</span> Malware Analysis</li>
-                            <li><span class="text-neon-blue">&gt;</span> Digital Forensics</li>
-                            <li><span class="text-neon-blue">&gt;</span> Social Engineering</li>
-                            <li><span class="text-neon-blue">&gt;</span> DDoS Prevention</li>
-                            <li><span class="text-neon-blue">&gt;</span> OSINT (Open-Source Intelligence)</li>
-                            <li><span class="text-neon-blue">&gt;</span> Threat Intelligence</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-bold text-text-light mb-4">Networking</h4>
-                        <ul class="space-y-2 text-lg text-text-gray">
-                            <li><span class="text-neon-blue">&gt;</span> Network Protocols</li>
-                            <li><span class="text-neon-blue">&gt;</span> TCP</li>
-                            <li><span class="text-neon-blue">&gt;</span> Firewall Policies</li>
-                            <li><span class="text-neon-blue">&gt;</span> Network Traffic Monitoring</li>
-                        </ul>
-                        <h4 class="text-2xl font-bold text-text-light mt-6 mb-4">Programming & Tools</h4>
-                        <ul class="space-y-2 text-lg text-text-gray">
-                            <li><span class="text-neon-blue">&gt;</span> Python</li>
-                            <li><span class="text-neon-blue">&gt;</span> HTML/CSS</li>
-                            <li><span class="text-neon-blue">&gt;</span> Flask</li>
-                            <li><span class="text-neon-blue">&gt;</span> SQLite3</li>
-                            <li><span class="text-neon-blue">&gt;</span> Wireshark</li>
-                            <li><span class="text-neon-blue">&gt;</span> geoip2, DVWA & VulnWEB</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-bold text-text-light mb-4">Certifications</h4>
-                        <ul class="space-y-2 text-lg text-text-gray">
-                            <li><span class="text-neon-blue">&gt;</span> Certified Ethical Hacker (CEH) - EC-Council</li>
-                            <li><span class="text-neon-blue">&gt;</span> Digital Forensic Essentials (DFE) - EC-Council</li>
-                            <li><span class="text-neon-blue">&gt;</span> Mastercard Cybersecurity Job Simulation - Forage</li>
-                            <li><span class="text-neon-blue">&gt;</span> Deloitte Australia Cyber Job Simulation - Forage</li>
-                            <li><span class="text-neon-blue">&gt;</span> Tata Cybersecurity Analyst Job Simulation - Forage</li>
-                        </ul>
-                    </div>
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <h2 class="text-4xl font-bold neon-text-purple mb-12 text-center">Skills & Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skills Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold header-text mb-4">Cybersecurity Skills</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><span class="header-text">&gt;</span> Penetration Testing</li>
+                        <li><span class="header-text">&gt;</span> Vulnerability Assessment</li>
+                        <li><span class="header-text">&gt;</span> Ethical Hacking</li>
+                        <li><span class="header-text">&gt;</span> Malware Analysis</li>
+                        <li><span class="header-text">&gt;</span> Digital Forensics</li>
+                        <li><span class="header-text">&gt;</span> Social Engineering</li>
+                        <li><span class="header-text">&gt;</span> DDoS Prevention</li>
+                        <li><span class="header-text">&gt;</span> OSINT</li>
+                        <li><span class="header-text">&gt;</span> Threat Intelligence</li>
+                    </ul>
+                </div>
+                <!-- Networking & Programming Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold header-text mb-4">Networking & Tools</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><span class="header-text">&gt;</span> Network Protocols (TCP)</li>
+                        <li><span class="header-text">&gt;</span> Firewall Policies</li>
+                        <li><span class="header-text">&gt;</span> Network Traffic Monitoring</li>
+                        <li><span class="header-text">&gt;</span> Python, HTML/CSS, Flask</li>
+                        <li><span class="header-text">&gt;</span> SQLite3, Wireshark</li>
+                        <li><span class="header-text">&gt;</span> geoip2, DVWA & VulnWEB</li>
+                    </ul>
+                </div>
+                <!-- Certifications Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold header-text mb-4">Certifications</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><span class="header-text">&gt;</span> Certified Ethical Hacker (CEH) - EC-Council</li>
+                        <li><span class="header-text">&gt;</span> Digital Forensic Essentials (DFE) - EC-Council</li>
+                        <li><span class="header-text">&gt;</span> Mastercard Cybersecurity Job Simulation - Forage</li>
+                        <li><span class="header-text">&gt;</span> Deloitte Australia Cyber Job Simulation - Forage</li>
+                        <li><span class="header-text">&gt;</span> Tata Cybersecurity Analyst Job Simulation - Forage</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="py-20">
-            <div class="glass-card">
-                <h3 class="text-3xl font-bold neon-heading mb-6">/ experience</h3>
-                <div class="space-y-8">
-                    <!-- Experience Item 1 -->
-                    <div class="border-l-2 border-neon-blue pl-4">
-                        <h4 class="text-xl font-bold text-text-light">Cloud Solution Architect</h4>
-                        <p class="text-lg text-text-gray">Corvit Systems | <span class="font-mono">June 2025 - Present</span></p>
-                        <ul class="list-disc list-inside mt-2 text-base text-text-light space-y-1">
-                            <li>Developed comprehensive cloud solutions by analyzing client requirements and creating tailored strategies.</li>
-                            <li>Evaluated and recommended improvements to existing cloud infrastructures, enhancing performance and reducing operational costs.</li>
-                            <li>Delivered innovative solutions that exceeded client expectations by staying current with emerging trends in cloud technology.</li>
-                        </ul>
+        <section id="experience" class="py-24">
+            <h2 class="text-4xl font-bold header-text mb-12 text-center">My Experience</h2>
+            <div class="space-y-8">
+                <!-- Experience Item 1 -->
+                <div class="glass-card p-8 md:p-12">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold">Cloud Solution Architect</h3>
+                        <span class="text-sm text-slate-500">Corvit Systems | June 2025 - Present</span>
                     </div>
-                    <!-- Experience Item 2 -->
-                    <div class="border-l-2 border-neon-blue pl-4">
-                        <h4 class="text-xl font-bold text-text-light">Cybersecurity Intern</h4>
-                        <p class="text-lg text-text-gray">Redynox | <span class="font-mono">July 2025 - August 2025</span></p>
-                        <ul class="list-disc list-inside mt-2 text-base text-text-light space-y-1">
-                            <li>Conducted security audits of networks by applying firewall policies and monitoring network traffic and threats using tools like Wireshark.</li>
-                            <li>Performed vulnerability tests on vulnerable web applications (e.g., DVWA & VulnWEB) to validate attacks and demonstrate security flaws.</li>
-                        </ul>
-                    </div>
+                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
+                        <li>Developed comprehensive cloud solutions by analyzing client requirements and creating tailored strategies.</li>
+                        <li>Evaluated and recommended improvements to existing cloud infrastructures, enhancing performance and reducing operational costs.</li>
+                        <li>Delivered innovative solutions that exceeded client expectations by staying current with emerging trends in cloud technology.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <div class="glass-card">
-                <h3 class="text-3xl font-bold neon-heading mb-6">/ projects</h3>
-                <div class="space-y-8">
-                    <!-- Project Item 1 -->
-                    <div class="border-l-2 border-neon-blue pl-4">
-                        <h4 class="text-xl font-bold text-text-light">SSH Honeypot - An Early Intrusion Trap</h4>
-                        <p class="text-lg font-mono text-text-gray">Python, Flask, SQLite3, HTML/CSS</p>
-                        <ul class="list-disc list-inside mt-2 text-base text-text-light space-y-1">
-                            <li>Engineered a low-interaction SSH honeypot to lure attackers, recording their activities without granting them access to a real system.</li>
-                            <li>Developed a multi-threaded TCP server using Python's socket library to mimic a standard SSH handshake, capturing authentication attempts.</li>
-                            <li>Built a full-stack web dashboard using Flask and SQLite to provide real-time visualization and analysis of collected attack data.</li>
-                        </ul>
+                <!-- Experience Item 2 -->
+                <div class="glass-card p-8 md:p-12">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold">Cybersecurity Intern</h3>
+                        <span class="text-sm text-slate-500">Redynox | July 2025 - August 2025</span>
                     </div>
+                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
+                        <li>Conducted security audits of networks by applying firewall policies and monitoring network traffic and threats using tools like Wireshark.</li>
+                        <li>Performed vulnerability tests on vulnerable web applications (e.g., DVWA & VulnWEB) to validate attacks and demonstrate security flaws.</li>
+                    </ul>
+                </div>
+                <!-- Experience Item 3 -->
+                <div class="glass-card p-8 md:p-12">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold">Cyber Security CEH/CHFI Trainee</h3>
+                        <span class="text-sm text-slate-500">Corvit Systems | July 2024 - November 2024</span>
+                    </div>
+                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
+                        <li>Participated in penetration testing exercises to assess the effectiveness of current security measures and recommend improvements.</li>
+                    </ul>
                 </div>
             </div>
         </section>
         
-        <!-- Contact Section -->
-        <section id="contact" class="py-20">
-            <div class="glass-card text-center">
-                <h3 class="text-3xl font-bold neon-heading mb-6">/ contact</h3>
-                <p class="text-lg text-text-light mb-8">
-                    Let's connect and discuss cybersecurity.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg">
-                    <a href="mailto:mian35927@gmail.com" class="text-text-light hover:text-neon-pink transition-colors duration-300">
-                        <span class="font-mono text-neon-blue">email: </span>mian35927@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/muneeb-mazhar-18a93722b" target="_blank" class="text-text-light hover:text-neon-pink transition-colors duration-300">
-                        <span class="font-mono text-neon-blue">linkedin: </span>Muneeb Mazhar
-                    </a>
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <h2 class="text-4xl font-bold neon-text-purple mb-12 text-center">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project Item 1 -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold mb-2">SSH Honeypot - An Early Intrusion Trap</h3>
+                    <p class="text-sm font-mono text-slate-500 mb-4">Python, Flask, SQLite3, HTML/CSS</p>
+                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
+                        <li>Engineered a low-interaction SSH honeypot to lure attackers, recording their activities without granting them access to a real system.</li>
+                        <li>Developed a multi-threaded TCP server using Python's socket library to mimic a standard SSH handshake, capturing authentication attempts.</li>
+                        <li>Built a full-stack web dashboard using Flask and SQLite to provide real-time visualization and analysis of collected attack data.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <h2 class="text-4xl font-bold header-text mb-12 text-center">Let's Connect</h2>
+            <div class="glass-card max-w-2xl mx-auto p-8 md:p-12">
+                <!-- Formspree integration -->
+                <form action="https://formspree.io/f/mqalnvzl" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-slate-300">Name</label>
+                        <input type="text" id="name" name="name" class="w-full mt-2 p-3 bg-transparent border border-slate-700 rounded-md focus:border-neon-text-purple focus:outline-none transition-colors duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-slate-300">Email</label>
+                        <input type="email" id="email" name="email" class="w-full mt-2 p-3 bg-transparent border border-slate-700 rounded-md focus:border-neon-text-purple focus:outline-none transition-colors duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-slate-300">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full mt-2 p-3 bg-transparent border border-slate-700 rounded-md focus:border-neon-text-purple focus:outline-none transition-colors duration-300"></textarea>
+                    </div>
+                    <input type="hidden" name="_replyto" value="mian35927@gmail.com">
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary w-full md:w-auto">Send Message</button>
+                    </div>
+                </form>
+                <!-- Submission success message -->
+                <div id="contact-form-success" class="success-message">
+                    Thank you for your message! I'll get back to you shortly.
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-8 text-sm text-text-gray">
-        <p>&copy; 2025 Muneeb Mazhar. All rights reserved.</p>
+    <footer class="text-center py-8 text-slate-500 text-sm border-t border-[#310a59]">
+        <p>&copy; 2024 Muneeb Mazhar. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for smooth scrolling and mobile menu -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
                         behavior: 'smooth'
                     });
-                    // Close mobile menu after clicking a link
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                });
+                }
             });
+        });
 
-            // Mobile menu toggle
-            const mobileMenuButton = document.querySelector('.mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+        // Mobile menu toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
             });
-            
-            // Highlight active link on scroll
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                        current = section.getAttribute('id');
+        });
+        
+        // Formspree submission handling
+        const form = document.querySelector('form');
+        const successMessage = document.getElementById('contact-form-success');
+        
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
                     }
                 });
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
-                        link.classList.add('active');
-                    }
-                });
-            });
+
+                if (response.ok) {
+                    form.reset();
+                    successMessage.style.display = 'block';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000); // Hide message after 5 seconds
+                } else {
+                    console.error('Form submission failed.');
+                }
+            } catch (error) {
+                console.error('An error occurred during form submission:', error);
+            }
         });
     </script>
 </body>
