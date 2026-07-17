@@ -23,7 +23,6 @@
             background-repeat: no-repeat;
         }
 
-        /* Updated color for the main heading to a more subtle gray without glow */
         .header-text {
             color: #E2E8F0;
         }
@@ -31,7 +30,7 @@
         .neon-text-purple {
             color: #d156ff;
         }
-        
+
         .btn-primary {
             background: linear-gradient(90deg, #d156ff, #00FFFF);
             padding: 0.75rem 2.5rem;
@@ -40,12 +39,12 @@
             font-weight: bold;
             transition: transform 0.2s ease-in-out;
         }
-        
+
         .btn-primary:hover {
             transform: scale(1.05);
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
         }
-        
+
         .glass-card {
             background: rgba(4, 2, 38, 0.5);
             backdrop-filter: blur(10px);
@@ -55,7 +54,6 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* Style for the confirmation message */
         .success-message {
             display: none;
             text-align: center;
@@ -76,6 +74,7 @@
                 <a href="#about" class="hover:text-slate-500 transition-colors duration-300">About</a>
                 <a href="#skills" class="hover:text-slate-500 transition-colors duration-300">Skills</a>
                 <a href="#experience" class="hover:text-slate-500 transition-colors duration-300">Experience</a>
+                <a href="#education" class="hover:text-slate-500 transition-colors duration-300">Education</a>
                 <a href="#projects" class="hover:text-slate-500 transition-colors duration-300">Projects</a>
             </nav>
         </div>
@@ -92,10 +91,11 @@
         <a href="#about" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">About</a>
         <a href="#skills" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Skills</a>
         <a href="#experience" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Experience</a>
+        <a href="#education" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Education</a>
         <a href="#projects" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Projects</a>
         <a href="#contact" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Contact me</a>
     </nav>
-    
+
     <main class="container mx-auto px-6 py-24 md:py-32 max-w-7xl">
         <!-- Hero Section -->
         <section class="min-h-screen flex items-center justify-center" id="hero">
@@ -103,9 +103,9 @@
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
                     Muneeb Mazhar
                 </h1>
-                <h2 class="text-2xl font-semibold neon-text-purple mt-4">Certified Ethical Hacker | Pen-tester | Cyber security Graduate</h2>
+                <h2 class="text-2xl font-semibold neon-text-purple mt-4">Certified Ethical Hacker | Security Analyst | Cybersecurity Graduate</h2>
                 <p class="text-lg lg:text-xl text-slate-300 mt-6">
-                    Accomplished cybersecurity professional with expertise in web application penetration testing, vulnerability assessments, and incident response, backed by a CEH certification and a Bachelor’s degree in Cybersecurity.
+                    Results-driven cybersecurity professional with a Bachelor's degree in Cybersecurity and hands-on experience in web application penetration testing, vulnerability assessment, and enterprise security operations. Dual-certified (CEH & DFE).
                 </p>
                 <div class="mt-8">
                     <a href="#contact" class="btn-primary inline-block">Connect with me</a>
@@ -118,7 +118,7 @@
             <div class="glass-card p-8 md:p-12">
                 <h2 class="text-4xl font-bold header-text mb-6 text-center">About Me</h2>
                 <p class="text-center text-lg max-w-3xl mx-auto text-slate-300">
-                    I am a recent graduate with a Bachelor's degree in Cyber Security from Superior University, Lahore. My passion lies in securing digital landscapes and safeguarding sensitive data from evolving cyber threats. I'm a tech enthusiast constantly seeking knowledge about new technologies and their vulnerabilities. To this end, I've developed ethical hacking skills in areas like information gathering, social engineering, penetration testing, and more. I'm eager to leverage these skills and further enhance my knowledge through valuable certifications in the field.
+                    Results-driven cybersecurity professional with a Bachelor's degree in Cybersecurity and demonstrated expertise in web application penetration testing, vulnerability assessment, and enterprise security operations. Dual-certified (CEH & DFE) with hands-on internship experience at CNS Engineering operating Microsoft Defender for Office 365, managing phishing detection workflows, and responding to live email-based threats. Complemented by foundational cloud architecture knowledge and a proven ability to build security tools — including a real-time SSH Honeypot as a Final Year Project — that deliver actionable threat intelligence.
                 </p>
             </div>
         </section>
@@ -132,37 +132,39 @@
                     <h3 class="text-2xl font-bold header-text mb-4">Cybersecurity Skills</h3>
                     <ul class="space-y-2 text-slate-400">
                         <li><span class="header-text">&gt;</span> Penetration Testing</li>
+                        <li><span class="header-text">&gt;</span> Web App Pentesting</li>
                         <li><span class="header-text">&gt;</span> Vulnerability Assessment</li>
                         <li><span class="header-text">&gt;</span> Ethical Hacking</li>
-                        <li><span class="header-text">&gt;</span> Malware Analysis</li>
-                        <li><span class="header-text">&gt;</span> Digital Forensics</li>
-                        <li><span class="header-text">&gt;</span> Social Engineering</li>
-                        <li><span class="header-text">&gt;</span> DDoS Prevention</li>
-                        <li><span class="header-text">&gt;</span> OSINT</li>
+                        <li><span class="header-text">&gt;</span> Incident Response</li>
                         <li><span class="header-text">&gt;</span> Threat Intelligence</li>
+                        <li><span class="header-text">&gt;</span> Digital Forensics</li>
+                        <li><span class="header-text">&gt;</span> Malware Analysis</li>
+                        <li><span class="header-text">&gt;</span> Social Engineering</li>
+                        <li><span class="header-text">&gt;</span> OSINT</li>
+                        <li><span class="header-text">&gt;</span> DDoS Prevention</li>
                     </ul>
                 </div>
                 <!-- Networking & Programming Card -->
                 <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold header-text mb-4">Networking & Tools</h3>
+                    <h3 class="text-2xl font-bold header-text mb-4">Tools, Cloud & Networking</h3>
                     <ul class="space-y-2 text-slate-400">
-                        <li><span class="header-text">&gt;</span> Network Protocols (TCP)</li>
-                        <li><span class="header-text">&gt;</span> Firewall Policies</li>
-                        <li><span class="header-text">&gt;</span> Network Traffic Monitoring</li>
-                        <li><span class="header-text">&gt;</span> Python, HTML/CSS, Flask</li>
-                        <li><span class="header-text">&gt;</span> SQLite3, Wireshark</li>
-                        <li><span class="header-text">&gt;</span> geoip2, DVWA & VulnWEB</li>
+                        <li><span class="header-text">&gt;</span> Burp Suite, Metasploit</li>
+                        <li><span class="header-text">&gt;</span> Wireshark, DVWA, VulnWEB</li>
+                        <li><span class="header-text">&gt;</span> OWASP Top 10</li>
+                        <li><span class="header-text">&gt;</span> Python, PowerShell, Bash</li>
+                        <li><span class="header-text">&gt;</span> AWS (EC2, S3, IAM, VPC)</li>
+                        <li><span class="header-text">&gt;</span> Huawei Cloud Fundamentals</li>
+                        <li><span class="header-text">&gt;</span> TCP/IP & Routing Protocols</li>
+                        <li><span class="header-text">&gt;</span> Network Traffic Analysis</li>
                     </ul>
                 </div>
                 <!-- Certifications Card -->
                 <div class="glass-card p-8">
                     <h3 class="text-2xl font-bold header-text mb-4">Certifications</h3>
                     <ul class="space-y-2 text-slate-400">
-                        <li><span class="header-text">&gt;</span> Certified Ethical Hacker (CEH) - EC-Council</li>
-                        <li><span class="header-text">&gt;</span> Digital Forensic Essentials (DFE) - EC-Council</li>
-                        <li><span class="header-text">&gt;</span> Mastercard Cybersecurity Job Simulation - Forage</li>
-                        <li><span class="header-text">&gt;</span> Deloitte Australia Cyber Job Simulation - Forage</li>
-                        <li><span class="header-text">&gt;</span> Tata Cybersecurity Analyst Job Simulation - Forage</li>
+                        <li><span class="header-text">&gt;</span> CEH — Certified Ethical Hacker, EC-Council (Nov 2024)</li>
+                        <li><span class="header-text">&gt;</span> DFE — Digital Forensic Essentials, EC-Council (Nov 2023)</li>
+                        <li><span class="header-text">&gt;</span> HCCDA — Tech Essentials, Huawei Cloud (Oct 2025)</li>
                     </ul>
                 </div>
             </div>
@@ -175,51 +177,57 @@
                 <!-- Experience Item 1 -->
                 <div class="glass-card p-8 md:p-12">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-2xl font-bold">Cloud Solution Architect</h3>
-                        <span class="text-sm text-slate-500">Corvit Systems | June 2025 - Present</span>
+                        <h3 class="text-2xl font-bold">Enterprise Security Intern</h3>
+                        <span class="text-sm text-slate-500">CNS Engineering | January 2026 - April 2026</span>
                     </div>
                     <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Developed comprehensive cloud solutions by analyzing client requirements and creating tailored strategies.</li>
-                        <li>Evaluated and recommended improvements to existing cloud infrastructures, enhancing performance and reducing operational costs.</li>
-                        <li>Delivered innovative solutions that exceeded client expectations by staying current with emerging trends in cloud technology.</li>
+                        <li>Operated enterprise-level security workflows to protect large-scale corporate assets and data across Microsoft 365 environments.</li>
+                        <li>Monitored, investigated, and remediated email-based threats using Microsoft Defender for Office 365.</li>
+                        <li>Managed end-to-end phishing detection pipelines — analyzing suspicious emails, triaging alerts, and leading user awareness initiatives to reduce exposure.</li>
+                        <li>Configured advanced security policies to defend against Business Email Compromise (BEC) and other sophisticated threat actors.</li>
+                        <li>Reviewed security alerts and audit logs to ensure rapid, structured incident response within a complex enterprise infrastructure.</li>
                     </ul>
                 </div>
                 <!-- Experience Item 2 -->
                 <div class="glass-card p-8 md:p-12">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-2xl font-bold">Cybersecurity Intern</h3>
-                        <span class="text-sm text-slate-500">Redynox | July 2025 - August 2025</span>
-                    </div>
-                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Conducted security audits of networks by applying firewall policies and monitoring network traffic and threats using tools like Wireshark.</li>
-                        <li>Performed vulnerability tests on vulnerable web applications (e.g., DVWA & VulnWEB) to validate attacks and demonstrate security flaws.</li>
-                    </ul>
-                </div>
-                <!-- Experience Item 3 -->
-                <div class="glass-card p-8 md:p-12">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-2xl font-bold">Cyber Security CEH/CHFI Trainee</h3>
+                        <h3 class="text-2xl font-bold">Cybersecurity Trainee</h3>
                         <span class="text-sm text-slate-500">Corvit Systems | July 2024 - November 2024</span>
                     </div>
                     <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Participated in penetration testing exercises to assess the effectiveness of current security measures and recommend improvements.</li>
+                        <li>Completed intensive cybersecurity training covering penetration testing methodologies and offensive security techniques.</li>
+                        <li>Performed vulnerability assessments and security analysis to identify, document, and mitigate risks across various systems.</li>
+                        <li>Studied and applied security policy frameworks to understand compliance and data protection standards.</li>
                     </ul>
                 </div>
             </div>
         </section>
-        
+
+        <!-- Education Section -->
+        <section id="education" class="py-24">
+            <h2 class="text-4xl font-bold neon-text-purple mb-12 text-center">Education</h2>
+            <div class="max-w-3xl mx-auto glass-card p-8 md:p-12">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-2xl font-bold">Bachelor of Science (Hons), Cybersecurity</h3>
+                    <span class="text-sm text-slate-500">2021 - 2025</span>
+                </div>
+                <p class="text-slate-400">The Superior University, Lahore</p>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="py-24">
             <h2 class="text-4xl font-bold neon-text-purple mb-12 text-center">Projects</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Project Item 1 -->
                 <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold mb-2">SSH Honeypot - An Early Intrusion Trap</h3>
-                    <p class="text-sm font-mono text-slate-500 mb-4">Python, Flask, SQLite3, HTML/CSS</p>
+                    <h3 class="text-2xl font-bold mb-2">Real-Time SSH Honeypot</h3>
+                    <p class="text-sm font-mono text-slate-500 mb-4">Final Year Project | Python, Flask, SQLite3, HTML/CSS</p>
                     <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Engineered a low-interaction SSH honeypot to lure attackers, recording their activities without granting them access to a real system.</li>
-                        <li>Developed a multi-threaded TCP server using Python's socket library to mimic a standard SSH handshake, capturing authentication attempts.</li>
-                        <li>Built a full-stack web dashboard using Flask and SQLite to provide real-time visualization and analysis of collected attack data.</li>
+                        <li>Architected and deployed a production-grade, real-time SSH honeypot designed to lure, capture, and analyze attacker behavior at scale.</li>
+                        <li>Engineered a multi-threaded TCP server in Python to intercept authentication attempts and log attacker credentials, IPs, and session metadata in real time.</li>
+                        <li>Built a full-stack analytics dashboard using Flask and SQLite3 to visualize live attack data, geographic threat patterns, and brute-force trends.</li>
+                        <li>Delivered actionable threat intelligence by aggregating honeypot data into structured reports, simulating real-world SOC analyst workflows.</li>
                     </ul>
                 </div>
             </div>
@@ -257,7 +265,7 @@
     </main>
 
     <footer class="text-center py-8 text-slate-500 text-sm border-t border-[#310a59]">
-        <p>&copy; 2024 Muneeb Mazhar. All rights reserved.</p>
+        <p>&copy; 2026 Muneeb Mazhar. All rights reserved.</p>
     </footer>
 
     <script>
@@ -296,11 +304,11 @@
                 mobileMenu.classList.remove('flex');
             });
         });
-        
+
         // Formspree submission handling
         const form = document.querySelector('form');
         const successMessage = document.getElementById('contact-form-success');
-        
+
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             const formData = new FormData(form);
