@@ -1,331 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muneeb Mazhar | Cyber Security</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+<div align="center">
 
-        html {
-            scroll-behavior: smooth;
-        }
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:b026ff,100:2de2c9&height=200&section=header&text=Muneeb%20Mazhar&fontSize=48&fontColor=2de2c9&animation=twinkling&fontAlignY=35&desc=Cybersecurity%20Analyst%20%7C%20SOC%20%7C%20Threat%20Intel%20%7C%20Incident%20Response&descAlignY=55&descSize=18&descColor=b026ff" width="100%"/>
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d0124;
-            color: #E2E8F0;
-            margin: 0;
-            background-image: radial-gradient(at 10% 20%, #1a013d, transparent 60%),
-                              radial-gradient(at 90% 80%, #30015f, transparent 60%);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
+<a href="https://github.com/mian4278">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=2DE2C9&center=true&vCenter=true&width=650&lines=Penetration+Testing+%7C+Vulnerability+Assessment;Threat+Intelligence+%7C+Incident+Response;Building+the+SSH+Honeypot+threat+dashboard;Microsoft+Sentinel+%7C+Wazuh+SIEM+%7C+Defender+for+O365" alt="Typing SVG" />
+</a>
 
-        /* Updated color for the main heading to a more subtle gray without glow */
-        .header-text {
-            color: #E2E8F0;
-        }
+<br/>
 
-        .neon-text-purple {
-            color: #d156ff;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(90deg, #d156ff, #00FFFF);
-            padding: 0.75rem 2.5rem;
-            border-radius: 9999px;
-            color: #0d0124;
-            font-weight: bold;
-            transition: transform 0.2s ease-in-out;
-        }
-        
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
-        }
-        
-        .glass-card {
-            background: rgba(4, 2, 38, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(49, 10, 89, 0.2);
-            border-radius: 1rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
+<img src="https://img.shields.io/badge/Open%20to%20Work-2DE2C9?style=for-the-badge&logo=handshake&logoColor=000000&labelColor=B026FF" alt="Open to Work"/>
 
-        /* Style for the confirmation message */
-        .success-message {
-            display: none;
-            text-align: center;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #00FFFF;
-            margin-top: 1rem;
-        }
-    </style>
-</head>
-<body class="bg-[#0d0124] text-slate-200">
+<br/><br/>
 
-    <!-- Header and Navigation -->
-    <header class="w-full py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 z-50 bg-[#0d0124]/50 backdrop-blur-md border-b border-[#310a59]">
-        <div class="flex items-center space-x-8">
-            <a href="#" class="text-3xl font-black header-text tracking-tighter">Muneeb Mazhar</a>
-            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
-                <a href="#about" class="hover:text-slate-500 transition-colors duration-300">About</a>
-                <a href="#skills" class="hover:text-slate-500 transition-colors duration-300">Skills</a>
-                <a href="#experience" class="hover:text-slate-500 transition-colors duration-300">Experience</a>
-                <a href="#projects" class="hover:text-slate-500 transition-colors duration-300">Projects</a>
-            </nav>
-        </div>
-        <div class="hidden md:flex space-x-6">
-            <a href="#contact" class="btn-primary">Contact me</a>
-        </div>
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
-    </header>
+<img src="https://komarev.com/ghpvc/?username=mian4278&label=Profile%20Views&color=b026ff&style=for-the-badge" alt="Profile Views"/>
+<img src="https://img.shields.io/github/followers/mian4278?label=Followers&style=for-the-badge&color=2de2c9&labelColor=000000" alt="Followers"/>
 
-    <!-- Mobile Navigation -->
-    <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-[#0d0124] z-40 flex-col items-center justify-center space-y-8 text-2xl hidden">
-        <button id="close-menu-btn" class="absolute top-6 right-6 text-2xl">X</button>
-        <a href="#about" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">About</a>
-        <a href="#skills" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Skills</a>
-        <a href="#experience" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Experience</a>
-        <a href="#projects" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Projects</a>
-        <a href="#contact" class="header-text" onclick="document.getElementById('mobile-menu').style.display='none'">Contact me</a>
-    </nav>
-    
-    <main class="container mx-auto px-6 py-24 md:py-32 max-w-7xl">
-        <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center" id="hero">
-            <div class="flex flex-col items-center justify-center w-full max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-                    Muneeb Mazhar
-                </h1>
-                <h2 class="text-2xl font-semibold neon-text-purple mt-4">Certified Ethical Hacker | Pen-tester | Cyber security Graduate</h2>
-                <p class="text-lg lg:text-xl text-slate-300 mt-6">
-                    Accomplished cybersecurity professional with expertise in web application penetration testing, vulnerability assessments, and incident response, backed by a CEH certification and a Bachelor’s degree in Cybersecurity.
-                </p>
-                <div class="mt-8">
-                    <a href="#contact" class="btn-primary inline-block">Connect with me</a>
-                </div>
-            </div>
-        </section>
+</div>
 
-        <!-- About Section -->
-        <section id="about" class="py-24">
-            <div class="glass-card p-8 md:p-12">
-                <h2 class="text-4xl font-bold header-text mb-6 text-center">About Me</h2>
-                <p class="text-center text-lg max-w-3xl mx-auto text-slate-300">
-                    I am a recent graduate with a Bachelor's degree in Cyber Security from Superior University, Lahore. My passion lies in securing digital landscapes and safeguarding sensitive data from evolving cyber threats. I'm a tech enthusiast constantly seeking knowledge about new technologies and their vulnerabilities. To this end, I've developed ethical hacking skills in areas like information gathering, social engineering, penetration testing, and more. I'm eager to leverage these skills and further enhance my knowledge through valuable certifications in the field.
-                </p>
-            </div>
-        </section>
+<br/>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-24">
-            <h2 class="text-4xl font-bold neon-text-purple mb-12 text-center">Skills & Certifications</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skills Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold header-text mb-4">Cybersecurity Skills</h3>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><span class="header-text">&gt;</span> Penetration Testing</li>
-                        <li><span class="header-text">&gt;</span> Vulnerability Assessment</li>
-                        <li><span class="header-text">&gt;</span> Ethical Hacking</li>
-                        <li><span class="header-text">&gt;</span> Malware Analysis</li>
-                        <li><span class="header-text">&gt;</span> Digital Forensics</li>
-                        <li><span class="header-text">&gt;</span> Social Engineering</li>
-                        <li><span class="header-text">&gt;</span> DDoS Prevention</li>
-                        <li><span class="header-text">&gt;</span> OSINT</li>
-                        <li><span class="header-text">&gt;</span> Threat Intelligence</li>
-                    </ul>
-                </div>
-                <!-- Networking & Programming Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold header-text mb-4">Networking & Tools</h3>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><span class="header-text">&gt;</span> Network Protocols (TCP)</li>
-                        <li><span class="header-text">&gt;</span> Firewall Policies</li>
-                        <li><span class="header-text">&gt;</span> Network Traffic Monitoring</li>
-                        <li><span class="header-text">&gt;</span> Python, HTML/CSS, Flask</li>
-                        <li><span class="header-text">&gt;</span> SQLite3, Wireshark</li>
-                        <li><span class="header-text">&gt;</span> geoip2, DVWA & VulnWEB</li>
-                    </ul>
-                </div>
-                <!-- Certifications Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold header-text mb-4">Certifications</h3>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><span class="header-text">&gt;</span> Certified Ethical Hacker (CEH) - EC-Council</li>
-                        <li><span class="header-text">&gt;</span> Digital Forensic Essentials (DFE) - EC-Council</li>
-                        <li><span class="header-text">&gt;</span> Mastercard Cybersecurity Job Simulation - Forage</li>
-                        <li><span class="header-text">&gt;</span> Deloitte Australia Cyber Job Simulation - Forage</li>
-                        <li><span class="header-text">&gt;</span> Tata Cybersecurity Analyst Job Simulation - Forage</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+## Who I Am
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-24">
-            <h2 class="text-4xl font-bold header-text mb-12 text-center">My Experience</h2>
-            <div class="space-y-8">
-                <!-- Experience Item 1 -->
-                <div class="glass-card p-8 md:p-12">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-2xl font-bold">Cloud Solution Architect</h3>
-                        <span class="text-sm text-slate-500">Corvit Systems | June 2025 - Present</span>
-                    </div>
-                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Developed comprehensive cloud solutions by analyzing client requirements and creating tailored strategies.</li>
-                        <li>Evaluated and recommended improvements to existing cloud infrastructures, enhancing performance and reducing operational costs.</li>
-                        <li>Delivered innovative solutions that exceeded client expectations by staying current with emerging trends in cloud technology.</li>
-                    </ul>
-                </div>
-                <!-- Experience Item 2 -->
-                <div class="glass-card p-8 md:p-12">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-2xl font-bold">Cybersecurity Intern</h3>
-                        <span class="text-sm text-slate-500">Redynox | July 2025 - August 2025</span>
-                    </div>
-                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Conducted security audits of networks by applying firewall policies and monitoring network traffic and threats using tools like Wireshark.</li>
-                        <li>Performed vulnerability tests on vulnerable web applications (e.g., DVWA & VulnWEB) to validate attacks and demonstrate security flaws.</li>
-                    </ul>
-                </div>
-                <!-- Experience Item 3 -->
-                <div class="glass-card p-8 md:p-12">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-2xl font-bold">Cyber Security CEH/CHFI Trainee</h3>
-                        <span class="text-sm text-slate-500">Corvit Systems | July 2024 - November 2024</span>
-                    </div>
-                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Participated in penetration testing exercises to assess the effectiveness of current security measures and recommend improvements.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects" class="py-24">
-            <h2 class="text-4xl font-bold neon-text-purple mb-12 text-center">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project Item 1 -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold mb-2">SSH Honeypot - An Early Intrusion Trap</h3>
-                    <p class="text-sm font-mono text-slate-500 mb-4">Python, Flask, SQLite3, HTML/CSS</p>
-                    <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                        <li>Engineered a low-interaction SSH honeypot to lure attackers, recording their activities without granting them access to a real system.</li>
-                        <li>Developed a multi-threaded TCP server using Python's socket library to mimic a standard SSH handshake, capturing authentication attempts.</li>
-                        <li>Built a full-stack web dashboard using Flask and SQLite to provide real-time visualization and analysis of collected attack data.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+```typescript
+const muneebMazhar = {
+  title: "Cybersecurity Analyst",
+  focus: ["SOC Operations", "Threat Intelligence", "Incident Response"],
+  stack: {
+    security: [
+      "Penetration Testing", "Vulnerability Assessment",
+      "Incident Response", "Threat Intelligence",
+      "OSINT", "Malware Analysis", "Digital Forensics"
+    ],
+    tools: [
+      "Microsoft Sentinel", "Defender for O365", "Wazuh SIEM",
+      "Burp Suite", "Metasploit", "Wireshark", "DVWA / VulnWEB", "OWASP Top 10"
+    ],
+    cloud: ["Azure", "AWS (EC2, S3, IAM, VPC)", "Huawei Cloud"],
+    dev: ["Python", "PowerShell", "Bash", "Flask", "SQLite3", "HTML/CSS"]
+  },
+  launchedProjects: ["Real-Time SSH Honeypot — attacker capture & threat analytics dashboard"],
+  certifications: ["CEH v12 (EC-Council)", "DFE (EC-Council)", "HCCDA (Huawei Cloud)"],
+  status: "Open to Work",
+  openTo: ["SOC Analyst roles", "Threat Intel", "Incident Response", "Collaboration"]
+};
+```
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-24">
-            <h2 class="text-4xl font-bold header-text mb-12 text-center">Let's Connect</h2>
-            <div class="glass-card max-w-2xl mx-auto p-8 md:p-12">
-                <!-- Formspree integration -->
-                <form action="https://formspree.io/f/mqalnvzl" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-slate-300">Name</label>
-                        <input type="text" id="name" name="name" class="w-full mt-2 p-3 bg-transparent border border-slate-700 rounded-md focus:border-neon-text-purple focus:outline-none transition-colors duration-300">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-slate-300">Email</label>
-                        <input type="email" id="email" name="email" class="w-full mt-2 p-3 bg-transparent border border-slate-700 rounded-md focus:border-neon-text-purple focus:outline-none transition-colors duration-300">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-slate-300">Message</label>
-                        <textarea id="message" name="message" rows="5" class="w-full mt-2 p-3 bg-transparent border border-slate-700 rounded-md focus:border-neon-text-purple focus:outline-none transition-colors duration-300"></textarea>
-                    </div>
-                    <input type="hidden" name="_replyto" value="mian35927@gmail.com">
-                    <div class="text-center">
-                        <button type="submit" class="btn-primary w-full md:w-auto">Send Message</button>
-                    </div>
-                </form>
-                <!-- Submission success message -->
-                <div id="contact-form-success" class="success-message">
-                    Thank you for your message! I'll get back to you shortly.
-                </div>
-            </div>
-        </section>
-    </main>
+<br/>
 
-    <footer class="text-center py-8 text-slate-500 text-sm border-t border-[#310a59]">
-        <p>&copy; 2024 Muneeb Mazhar. All rights reserved.</p>
-    </footer>
+## Featured Projects
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+### 🔒 Real-Time SSH Honeypot
 
-        // Mobile menu toggle logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+A production-style honeypot that lures, captures, and analyzes attacker behavior in real time — logging credentials, IPs, and session metadata, then visualizing threat patterns on a live analytics dashboard.
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('flex');
-        });
+| Layer | Technology |
+|---|---|
+| Server | Python (multi-threaded TCP socket server) |
+| Backend | Flask |
+| Data | SQLite3 |
+| Geo Intelligence | GeoLite2 |
+| Frontend | HTML / CSS |
 
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        });
+<br/>
 
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-            });
-        });
-        
-        // Formspree submission handling
-        const form = document.querySelector('form');
-        const successMessage = document.getElementById('contact-form-success');
-        
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+## Tech Stack
 
-                if (response.ok) {
-                    form.reset();
-                    successMessage.style.display = 'block';
-                    setTimeout(() => {
-                        successMessage.style.display = 'none';
-                    }, 5000); // Hide message after 5 seconds
-                } else {
-                    console.error('Form submission failed.');
-                }
-            } catch (error) {
-                console.error('An error occurred during form submission:', error);
-            }
-        });
-    </script>
-</body>
-</html>
+**Security Tooling**
+
+<img src="https://skillicons.dev/icons?i=linux,bash,powershell" />
+
+**Cloud**
+
+<img src="https://skillicons.dev/icons?i=azure,aws" />
+
+**Dev & Scripting**
+
+<img src="https://skillicons.dev/icons?i=python,flask,sqlite,html,css" />
+
+<br/>
+
+## GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=mian4278&show_icons=true&theme=nord&hide_border=true&bg_color=000000&title_color=2de2c9&icon_color=b026ff&text_color=c9d1d9" width="48%"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mian4278&layout=compact&theme=nord&hide_border=true&bg_color=000000&title_color=2de2c9&text_color=c9d1d9" width="48%"/>
+
+<img src="https://streak-stats.demolab.com?user=mian4278&theme=nord&hide_border=true&background=000000&ring=b026ff&fire=2de2c9&currStreakLabel=2de2c9&sideLabels=c9d1d9&dates=c9d1d9" width="97%"/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=mian4278&theme=radical&no-frame=true&no-bg=true&margin-w=10&margin-h=10" width="97%"/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=mian4278&bg_color=000000&color=2de2c9&line=b026ff&point=ffffff&area=true&hide_border=true" width="97%"/>
+
+</div>
+
+<br/>
+
+## Connect
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/muneeb-mazhar-4009713ab/">
+  <img src="https://img.shields.io/badge/LinkedIn-b026ff?style=for-the-badge&logo=linkedin&logoColor=2de2c9" alt="LinkedIn"/>
+</a>
+<a href="mailto:mian35927@gmail.com">
+  <img src="https://img.shields.io/badge/Email-2de2c9?style=for-the-badge&logo=gmail&logoColor=000000&labelColor=b026ff" alt="Email"/>
+</a>
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2de2c9,50:b026ff,100:000000&height=120&section=footer" width="100%"/>
